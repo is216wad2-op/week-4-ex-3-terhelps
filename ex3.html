@@ -24,9 +24,11 @@
 	
 		// add code here
 		function addlistafterclick(){
+
 			var input = document.getElementById("userinput");
 			var ul = document.getElementsByTagName("ul")[0];
-			var li = document.createElement("li");
+			var li = document.createElement("li"); // <li></li>
+
 			if (input.value.length > 0){
 				var textNode = document.createTextNode(input.value);
 				li.appendChild(textNode); //<li>Candy</li>
