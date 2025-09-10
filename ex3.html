@@ -8,7 +8,7 @@
 	<p>Get it done today</p>
 	
 		<!-- add HTML code here -->
-		<input id="userinput "type="text" placeholder="enter items">
+		<input id="userinput"type="text" placeholder="enter items">
 		<button id="enter" onclick="addlistafterclick()">Enter</button>
 		
 	<ul>
@@ -30,7 +30,7 @@
 			var li = document.createElement("li"); // <li></li>
 
 			if (input.value.length > 0){
-				var textNode = document.createTextNode(input.value);
+				var textNode = document.createTextNode(input);
 				li.appendChild(textNode); //<li>Candy</li>
 				ul.appendChild(li); // this is the part where we append the li to the unordered list
 				input.value = "";
