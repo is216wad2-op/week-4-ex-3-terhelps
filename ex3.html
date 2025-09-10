@@ -1,28 +1,41 @@
 <html>
-   <head>
-      <title>Event Handling</title>
-   </head>
-   <body>
-     
-      <h1>Shopping List</h1>
-      <p>Get it done today</p>
-      
-        <!-- add HTML code here -->
+<head>
+	<title>Event Handling</title>
+</head>
+<body>
+	
+	<h1>Shopping List</h1>
+	<p>Get it done today</p>
+	
+		<!-- add HTML code here -->
+		<input id="userinput "type="text" placeholder="enter items">
+		<button id="enter" onclick="addlistafterclick()">Enter</button>
+		
+	<ul>
+		<li>Notebook</li>
+		<li>Jello</li>
+		<li>Spinach</li>
+		<li>Rice</li>
+		<li>Birthday Cake</li>
+		<li>Candles</li>
+	</ul>
+	
+	<script>
+	
+		// add code here
+		function addlistafterclick(){
+			var input = document.getElementById("userinput");
+			var ul = document.getElementsByTagName("ul")[0];
+			var li = document.createElement("li");
+			if (input.value.length > 0){
+				var textNode = document.createTextNode(input.value);
+				li.appendChild(textNode); //<li>Candy</li>
+				ul.appendChild(li); // this is the part where we append the li to the unordered list
+				input.value = "";
+			}
+		}
 
-      <ul>
-         <li>Notebook</li>
-         <li>Jello</li>
-         <li>Spinach</li>
-         <li>Rice</li>
-         <li>Birthday Cake</li>
-         <li>Candles</li>
-      </ul>
-      
-      <script>
-      
-        // add code here
+	</script>
 
-      </script>
- 
-   </body>
+</body>
 </html>
